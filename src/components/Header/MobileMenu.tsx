@@ -21,7 +21,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, links }) => {
             key={link}
             href="#"
             className={cn(
-              'inline-flex h-12 items-center justify-center rounded-[100px] px-5 py-2 font-[family-name:var(--font-roboto)] text-sm font-medium uppercase text-neutral-accent transition hover:bg-neutral-subdued hover:text-primary-normal',
+              'font-barlow inline-flex h-12 items-center justify-center rounded-[100px] px-5 py-2 text-sm font-medium uppercase text-neutral-accent transition hover:bg-neutral-subdued hover:text-primary-normal',
               {
                 'bg-neutral-subdued text-primary-normal': link === 'Home',
               },

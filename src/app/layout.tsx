@@ -1,4 +1,5 @@
-import { Barlow_Semi_Condensed, Roboto } from 'next/font/google';
+import { Barlow_Semi_Condensed } from 'next/font/google';
+import localFont from 'next/font/local';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { cn } from '@/lib/utils';
@@ -11,10 +12,35 @@ const barlowSemiCondensed = Barlow_Semi_Condensed({
   variable: '--font-barlow-semi-condensed',
 });
 
-const roboto = Roboto({
-  weight: ['400', '500', '600', '700', '800', '900'],
-  subsets: ['latin'],
-  variable: '--font-roboto',
+const neueHaas = localFont({
+  src: [
+    {
+      path: '../../public/fonts/NeueHaasDisplayLight.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NeueHaasDisplayRoman.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NeueHaasDisplayMediu.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NeueHaasDisplayBold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/NeueHaasDisplayBlack.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-neue-haas',
 });
 
 export const metadata: Metadata = {
@@ -53,7 +79,7 @@ export default function RootLayout({
       <body
         className={cn(
           barlowSemiCondensed.variable,
-          roboto.variable,
+          neueHaas.variable,
           'mx-auto max-w-[1600px] overflow-x-hidden font-sans',
         )}
       >

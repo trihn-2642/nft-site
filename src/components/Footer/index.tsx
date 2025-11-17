@@ -58,7 +58,7 @@ const Footer = () => {
                   <li key={label}>
                     <Link
                       href="#"
-                      className="font-[family-name:var(--font-roboto)] text-xs font-normal text-neutral-accent transition-colors hover:text-paper md:text-sm"
+                      className="font-barlow text-xs font-normal text-neutral-accent transition-colors hover:text-paper md:text-sm"
                     >
                       {label}
                     </Link>

@@ -1,12 +1,12 @@
-import { FC } from 'react';
-import { IconProps } from './type';
+import type { FC, JSX } from 'react';
+import type { IconProps } from './type';
 
 const IconMenu: FC<IconProps> = ({
   width = 24,
   height = 19,
   className,
   ...props
-}) => {
+}): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

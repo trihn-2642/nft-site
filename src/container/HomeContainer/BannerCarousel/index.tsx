@@ -1,10 +1,12 @@
 'use client';
+
 import Image from 'next/image';
 import Carousel from '@/components/Carousel';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import './styles.scss';
+import type { JSX } from 'react';
 
-const BannerCarousel = () => {
+const BannerCarousel = (): JSX.Element => {
   const isMobile = useIsMobile();
 
   return (

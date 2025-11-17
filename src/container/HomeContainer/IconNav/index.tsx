@@ -65,12 +65,12 @@ export default function IconNav() {
                 <span className="relative flex-shrink-0">
                   <Icon width={item.width} height={item.height} />
                   {item.isShowNewBadge && (
-                    <span className="absolute -top-[6px] left-[20px] w-[18.33] rounded-[2.67px] bg-[#ff0000] px-[2.67px] py-[1.33px] text-center font-[family-name:var(--font-roboto)] text-[5.33px] font-medium uppercase leading-[8px] text-paper md:-top-2 md:left-[17px] md:w-[41px] md:rounded-[4px] md:px-[6px] md:py-[2px] md:text-xs">
+                    <span className="font-barlow absolute -top-[6px] left-[20px] w-[18.33] rounded-[2.67px] bg-[#ff0000] px-[2.67px] py-[1.33px] text-center text-[5.33px] font-medium uppercase leading-[8px] text-paper md:-top-2 md:left-[17px] md:w-[41px] md:rounded-[4px] md:px-[6px] md:py-[2px] md:text-xs">
                       New
                     </span>
                   )}
                 </span>
-                <span className="whitespace-pre-line text-center font-[family-name:var(--font-roboto)] text-[10px] font-normal uppercase leading-3 text-paper md:whitespace-normal md:text-sm">
+                <span className="font-barlow whitespace-pre-line text-center text-[10px] font-normal uppercase leading-3 text-paper md:whitespace-normal md:text-sm">
                   {item.label}
                 </span>
               </div>

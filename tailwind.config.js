@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-barlow-semi-condensed)', 'sans-serif'],
+        barlow: ['var(--font-neue-haas)', 'sans-serif'],
       },
       colors: {
         neutral: {
@@ -19,10 +20,12 @@ module.exports = {
         },
         primary: {
           normal: '#FFC700',
+          accent: '#C79B12',
+          subdued: '#FFE8AB'
         },
         ink: '#131415',
-        paper: '#ffffff',
-        'paper-60': '#ffffff99',
+        paper: '#FFFFFF',
+        'paper-60': '#FFFFFF99',
       },
     },
   },

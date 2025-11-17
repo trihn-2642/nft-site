@@ -49,7 +49,7 @@ const Header = () => {
                 key={link}
                 href="#"
                 className={cn(
-                  'flex h-10 items-center justify-center rounded-[100px] px-[18px] py-2 font-[family-name:var(--font-roboto)] text-sm font-medium uppercase text-neutral-accent transition hover:bg-neutral-subdued hover:text-primary-normal',
+                  'font-barlow flex h-10 items-center justify-center rounded-[100px] px-[18px] py-2 text-sm font-medium uppercase text-neutral-accent transition hover:bg-neutral-subdued hover:text-primary-normal',
                   {
                     'bg-neutral-subdued text-primary-normal': link === 'Home',
                   },
@@ -63,10 +63,10 @@ const Header = () => {
 
         {/* Actions */}
         <div className="flex items-center gap-4">
-          <button className="h-9 w-[98px] rounded-[100px] bg-primary-normal text-center text-base font-black italic text-neutral-invert-accent md:h-10 md:w-[114px]">
+          <button className="h-9 w-[98px] rounded-[100px] bg-primary-normal text-center text-base font-black italic text-neutral-invert-accent transition hover:bg-primary-accent md:h-10 md:w-[114px]">
             SIGNUP
           </button>
-          <button className="h-9 w-[90px] rounded-[100px] border border-primary-normal text-center text-base font-black italic text-neutral-accent md:h-10 md:w-[106px]">
+          <button className="h-9 w-[90px] rounded-[100px] border border-primary-normal text-center text-base font-black italic text-neutral-accent transition hover:border-primary-subdued md:h-10 md:w-[106px]">
             LOG IN
           </button>
         </div>

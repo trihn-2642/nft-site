@@ -2,19 +2,20 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { type JSX, useState } from 'react';
+
 import { cn } from '@/lib/utils';
+import { useIsMobile } from '@/hooks/useIsMobile';
 import MobileMenu from './MobileMenu';
 import { IconClose, IconMenu } from '../Icon';
-import { useIsMobile } from '@/hooks/useIsMobile';
 
 const HEADER_LINKS = ['Home', 'Items1', 'Items2', 'Items3', 'Items4'];
 
-const Header = () => {
+const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const isMobile = useIsMobile();
 
-  const toggleMenu = () => {
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -49,7 +50,7 @@ const Header = () => {
                 key={link}
                 href="#"
                 className={cn(
-                  'font-barlow flex h-10 items-center justify-center rounded-[100px] px-[18px] py-2 text-sm font-medium uppercase text-neutral-accent transition hover:bg-neutral-subdued hover:text-primary-normal',
+                  'flex h-10 items-center justify-center rounded-[100px] px-[18px] py-2 font-barlow text-sm font-medium uppercase text-neutral-accent transition hover:bg-neutral-subdued hover:text-primary-normal',
                   {
                     'bg-neutral-subdued text-primary-normal': link === 'Home',
                   },

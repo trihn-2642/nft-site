@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import type { FC, JSX } from 'react';
 
@@ -16,7 +17,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, links }): JSX.Element => (
   >
     <nav className="flex flex-col gap-4">
       {links.map((link) => (
-        <a
+        <Link
           key={link}
           href="#"
           className={cn(
@@ -25,7 +26,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, links }): JSX.Element => (
           )}
         >
           {link}
-        </a>
+        </Link>
       ))}
     </nav>
   </div>

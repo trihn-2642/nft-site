@@ -46,7 +46,7 @@ const Header = (): JSX.Element => {
           {/* Navigation */}
           <nav className="hidden md:flex">
             {HEADER_LINKS.map((link) => (
-              <a
+              <Link
                 key={link}
                 href="#"
                 className={cn(
@@ -57,7 +57,7 @@ const Header = (): JSX.Element => {
                 )}
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

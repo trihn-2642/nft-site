@@ -18,13 +18,13 @@ interface CarouselProps {
   dots?: boolean;
   arrows?: boolean;
   className?: string;
-  responsive?: Array<{
+  responsive?: {
     breakpoint: number;
     settings: {
       slidesToShow: number;
       slidesToScroll?: number;
     };
-  }>;
+  }[];
   dotsClass?: string;
   variableWidth?: boolean;
   classNameArrows?: string;

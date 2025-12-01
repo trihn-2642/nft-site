@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { type JSX, useState } from 'react';
 
 import { cn } from '@/lib/utils';
-import { useIsMobile } from '@/hooks/useIsMobile';
 import MobileMenu from './MobileMenu';
 import { IconClose, IconMenu } from '../Icon';
 
@@ -13,7 +12,6 @@ const HEADER_LINKS = ['Home', 'Items1', 'Items2', 'Items3', 'Items4'];
 
 const Header = (): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const isMobile = useIsMobile();
 
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
@@ -37,9 +35,10 @@ const Header = (): JSX.Element => {
             <Image
               src="/images/logo.png"
               alt="Logo"
-              width={isMobile ? 72 : 71}
-              height={isMobile ? 36 : 39}
+              width={0}
+              height={0}
               priority
+              className="h-[36px] !w-auto object-contain md:h-[40px]"
             />
           </Link>
 
@@ -51,9 +50,7 @@ const Header = (): JSX.Element => {
                 href="#"
                 className={cn(
                   'flex h-10 items-center justify-center rounded-[100px] px-[18px] py-2 font-barlow text-sm font-medium uppercase text-neutral-accent transition hover:bg-neutral-subdued hover:text-primary-normal',
-                  {
-                    'bg-neutral-subdued text-primary-normal': link === 'Home',
-                  },
+                  { 'bg-neutral-subdued text-primary-normal': link === 'Home' },
                 )}
               >
                 {link}
